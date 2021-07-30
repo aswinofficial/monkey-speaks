@@ -10,10 +10,10 @@ root.resizable(0, 0)
 
 def Translate():
     from_lan = str(from_lang_select.get())
-    to = str(to_lang_select.get())
+    to_lang = str(to_lang_select.get())
     text = str(text_widget.get())
 
-    translator = Translator(from_lang=str(from_lan), to_lang=str(to))
+    translator = Translator(from_lang=str(from_lan), to_lang=str(to_lang))
     translation = translator.translate(text)
 
     output_label.config(text=translation)
